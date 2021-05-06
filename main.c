@@ -16,7 +16,7 @@
 #define ADC_CHANNEL_EN (1<<15) // channel 16 is selected
 #define START_CONV (1<<30)
 #define TEMP_SENSOR_EN (1<<23)
-#define ADC_SAMP_TIME (1<<19) | (1<<20)
+#define ADC_SAMP_TIME (1<<20)
 #define Vbat_En (1<<22)
 
 /* UART Setup Parameters */
@@ -84,7 +84,7 @@ void ADC_INIT(void)
 	  ADC->CCR |= TEMP_SENSOR_EN;
 	  ADC->CCR &= ~Vbat_En ;
     ADC1->CR2 |= ADC_EN;
-	  ADC1->SMPR1 |= ADC_SAMP_TIME ; // 144 cycles
+	  ADC1->SMPR1 |= ADC_SAMP_TIME ; // 84 cycles -> sampling time = 12us
 	  ADC1->SQR1 |= ADC_CHANNEL_EN;
 
 }
