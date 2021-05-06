@@ -1,6 +1,9 @@
-# CPU-Temperature-Reading
+# ADC-DRIVER
+ADC DRIVER FOR STM32F411E-DISCO
 
-This programm allows to Read the temperature of the CPU and dispaly it using UART
+This programm allows to measure the analog sigal applied to pin PA1 through a POT
+
+The measured value is printed out in the watch terminal while debugging 
 
 A continous automatic conversion is enabled 
 
@@ -11,6 +14,5 @@ The ADC clock frequency = Fpclk, Fpclk= Sysclk= 16 mhz
 The build in 12-bit ADC is used during the test
 
 Hardware : STM32F411E-DISCO
-Software : Keil uvision , version 6
-
-Note : A USB TO UART Adapter is used to connect the  Laptop to the UART peripheral of the board 
+Software : Keil uvision version 6
+Programming Language : C
